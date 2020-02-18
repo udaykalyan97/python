@@ -1,20 +1,18 @@
 #bubble sort algorithm
-def bubbleSort(array):
-	isSorted=False
-	while(not isSorted):
-		isSorted=True
-		for i in range(0,len(array)-1):
-			if array[i]>=array[i+1]:
-				x=array[i]
-				array[i]=array[i+1]
-				array[i+1]=x
-				isSorted=False
-	return array
-
-
-arr=input("Enter your array:").split()
-for i in range(0,len(arr)):
-	arr[i]=int(arr[i])
-print(arr)
-print(bubbleSort(arr))
-
+import time
+def bubbleSort(arr):
+    print ("##BubbleSort algorithm##")
+    isSorted = False 
+    while (not isSorted):
+        isSorted = True 
+        for i in range (0, len (arr) - 1):
+            if arr[i] > arr[i + 1]:
+                x = arr[i]
+                arr[i] = arr[i + 1]
+                arr[i + 1] = x
+                isSorted = False 
+        print (arr) 
+        time.sleep(1) 
+print ("enter the array:")
+array=list(map(int,input().split()))
+bubbleSort (array)
