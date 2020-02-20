@@ -1,0 +1,16 @@
+#selection sort algorithm
+import time
+def bubbleSort(arr):
+    print ("##Selection Sort algorithm##")
+    x=arr[1]
+    for i in range(0,len(arr)-1):
+        if arr[i]>arr[i+1]:
+            x=arr[i+1]
+            arr[arr.index(x)]=arr[1]
+            arr[1]=x
+        
+    print (arr) 
+    time.sleep(1) 
+print ("enter the array:")
+array=list(map(int,input().split()))
+bubbleSort (array)
